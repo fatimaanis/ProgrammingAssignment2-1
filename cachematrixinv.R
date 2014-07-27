@@ -1,7 +1,9 @@
-## Put comments here that give an overall description of what your
-## functions do
-
-## Write a short comment describing this function
+## makeCachematrix creates the special matrix and returns a list of functions
+## The list constists of functions (set, get, setxinv, getxinv)
+## Each call resets the list and the matrix inverse value regardless of
+## wether or not the matrix has been modified
+## makeCachematrix is to be called only once to avoid 
+## recalculation of the inverse for a given matrix.
 
 makeCacheMatrix <- function(x = matrix()) {
     m <- NULL
