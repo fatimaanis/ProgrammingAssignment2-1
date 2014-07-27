@@ -1,8 +1,17 @@
 makeVector <- function(x = numeric()) {
     m <- NULL
+ #   set <- function(y) {
+ #       x <<- y
+ #       m <<- NULL
+ #   }
     set <- function(y) {
-        x <<- y
-        m <<- NULL
+        message("calling set")
+        if(!all(y==x)){
+            message("if calling set")
+            x <<- y
+            m <<- NULL
+        }
+        x
     }
     get <- function() x
     setmean <- function(mean) m <<- mean
